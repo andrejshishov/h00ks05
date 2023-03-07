@@ -43,7 +43,7 @@ const onSubmit = (e) => {
                     checked={status}
                 />
                 <label htmlFor={id} >
-                    <span className={status ? 'completed description' : 'description' }>{labelState}</span>
+                    <span className={status ? 'completed description colorcompleted' : 'description' }>{labelState}</span>
                     <span className="created">
                     <Timer
                     changeDeadline={changeDeadline}

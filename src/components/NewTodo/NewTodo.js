@@ -17,11 +17,15 @@ export default function NewTodo({ onItemAdded }) {
 
   const onSubmit = (e) => {
     e.preventDefault();
+    if (time.mins < 60 && time.secs < 60) {
     const sec = Math.abs(Number(time.mins) * 60) + Math.abs(Number(time.secs));
      onItemAdded(label, sec);
 
     setLabel('');
     setTime({ mins: '', secs: '' })
+    } else {
+    alert('Количество минут либо секунд не должно превышать 60')
+  }
 };
 
     return (

@@ -43,7 +43,9 @@ export default function Timer({ fulltime, status }) {
             type='button'
             onClick={onPause}
         />
+        <span className = 'timeredit'>
             {formatTime(time)}
+        </span>
        </React.Fragment>
     );
 }
